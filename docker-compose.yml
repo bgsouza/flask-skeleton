@@ -1,0 +1,47 @@
+version: "2"
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "5000:5000"
+    networks:
+      api_skeleton_network:
+        ipv4_address: 172.12.1.5
+    networks:
+      - default
+    stdin_open: true
+    tty: true
+    depends_on:
+      - api_skeleton_postgres
+      - api_skeleton_redis
+
+  api_skeleton_postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      api_skeleton_network:
+        ipv4_address: 172.12.1.2
+    environment:
+      POSTGRES_PASSWORD: "123456"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  api_skeleton_redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    networks:
+      api_skeleton_network:
+        ipv4_address: 172.12.1.3
+  
+networks:
+  api_skeleton_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.12.0.0/16
+          gateway: 172.12.5.254

@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask-restful = "==0.3.7"
+jwt = "*"
+flask-sqlalchemy = "==2.3.2"
+elasticsearch = "==6.3.1"
+elasticsearch-dsl = "==6.3.1"
+python-dotenv = "*"
+flask-redis = "*"
+logentries = "*"
+flask-api = "*"
+"psycopg2-binary" = "==2.8.1"
+urllib3 = "*"
+
+[dev-packages]
+flake8 = "*"
+
+[requires]
+python_version = "3.6"
