@@ -1,6 +1,6 @@
 # Flask Skeleton API
 Proposta de modelo para trabalhar com o framework Flask.
-Propês estrturação de diratórios, inicializadores, exemplos de uso de ORM e Redis
+Propõe estrturação de diratórios, inicializadores, exemplos de uso de ORM e Redis
 
 
 # API Flask
