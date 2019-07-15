@@ -33,6 +33,12 @@ Existem duas formas de se executar o teste
        - $ docker-compose exec app /bin/bash
        - $ python -m unittest tests/* 
 
+## TODO
+- Rodar migration junto com o docker
+- Adiconar suporte ao flask shell
+- Testes do /contacts
+- Adicionar rota de healtchck
+
 # Ajuda e Extras
 
 ## Flask DB
