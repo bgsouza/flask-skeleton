@@ -32,4 +32,7 @@ api.add_resource(Contacts, "/contacts")
 from app.controllers.hello import Hello
 api.add_resource(Hello, "/hello")
 
+from app.controllers.healthcheck import Healthcheck
+api.add_resource(Healthcheck, "/healthcheck")
+
 # return app
