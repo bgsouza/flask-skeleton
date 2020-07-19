@@ -16,12 +16,9 @@ Existem duas formas de se executar o projeto:
     - Forma 2: Executando em Docker
         - Exceução padrão:
             - $ docker-compose up -d --build
-        - Compilando versão de QA
+        - Compilando versão
             - Criando uma imagem:
-                - $ docker build -t app_cand_lata:<version> .
-            - Atualizar "image" com o nome app_cand_lata:<version> no arquivo "docker-compose-qa.yml"
-            - Rodar o docker ed QA:
-                - $ docker-compose -f docker-compose-qa.yml up -d
+                - $ docker build -t your_app:<version> .
 
 # Testes
 Existem duas formas de se executar o teste
